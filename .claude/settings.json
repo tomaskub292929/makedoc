@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m 'feat: initialize Rails 8.1 project with Tailwind CSS:*)"
+    ]
+  }
+}
