@@ -3,7 +3,16 @@
     "allow": [
       "Bash(git init:*)",
       "Bash(git add:*)",
-      "Bash(git commit -m 'feat: initialize Rails 8.1 project with Tailwind CSS:*)"
+      "Bash(git commit -m 'feat: initialize Rails 8.1 project with Tailwind CSS:*)",
+      "Bash(open http://localhost:3000)",
+      "Skill(browse)",
+      "Skill(browse:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://rss.blog.naver.com/makedoc.xml\")",
+      "Bash(curl -s \"https://rss.blog.naver.com/makedoc.xml\")"
+    ],
+    "additionalDirectories": [
+      "/Users/sekub/Desktop/3",
+      "/Users/sekub/makedoc/app"
     ]
   }
 }
