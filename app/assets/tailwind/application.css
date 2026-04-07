@@ -1,1 +1,49 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #92B9BD;
+  --color-primary-hover: #7DA5A9;
+  --color-primary-dark: #2C4A4E;
+  --color-primary-foreground: #1C3336;
+
+  --color-secondary: #A8D4AD;
+  --color-secondary-hover: #8FC496;
+  --color-secondary-dark: #1E3322;
+  --color-secondary-foreground: #1E3322;
+
+  --color-accent: #E8EC67;
+  --color-accent-hover: #D4D855;
+  --color-accent-dark: #3B3D15;
+  --color-accent-foreground: #2E3010;
+
+  --color-muted: #F0F4F4;
+  --color-muted-foreground: #6B8B8F;
+
+  --color-lime: #F2F79E;
+  --color-lime-dark: #D4D855;
+
+  --color-bg: #FAFBF9;
+  --color-bg-light: #F0F4F4;
+  --color-bg-cream: #F7FAF0;
+
+  --color-text-dark: #1C3336;
+  --color-text-body: #3D5F63;
+  --color-text-muted: #6B8B8F;
+  --color-text-white: #FFFFFF;
+
+  --color-border: #D5E2E3;
+  --color-border-light: #E8EFEF;
+
+  --font-sans: "Noto Sans KR", "Sora", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: "Sora", "Noto Sans KR", sans-serif;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

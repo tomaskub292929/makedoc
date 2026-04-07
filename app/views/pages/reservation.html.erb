@@ -1,3 +1,6 @@
+<% content_for :title, "무료 상담 예약" %>
+<% content_for :meta_description, "메이크닥 전문 컨설턴트와 무료 상담을 예약하세요. 헝가리, 몽골, 미국 의대 과정에 대한 맞춤 입시 상담을 받으실 수 있습니다." %>
+
 <section class="py-24 bg-bg-light px-6">
   <div class="container mx-auto max-w-3xl bg-white border border-border p-8 md:p-12 rounded-2xl shadow-card">
     <div class="text-center mb-10">
@@ -8,44 +11,44 @@
     <form class="space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="flex flex-col gap-2">
-          <label class="text-sm font-semibold text-text-dark">이름 *</label>
-          <input type="text" class="w-full px-4 py-3 bg-white border border-border rounded-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all text-text-dark" placeholder="홍길동">
+          <label for="reservation-name" class="text-sm font-semibold text-text-dark">이름 <span aria-label="필수 항목">*</span></label>
+          <input id="reservation-name" type="text" required class="w-full px-4 py-3 bg-white border border-border rounded-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all text-text-dark" placeholder="홍길동" autocomplete="name">
         </div>
         <div class="flex flex-col gap-2">
-          <label class="text-sm font-semibold text-text-dark">연락처 *</label>
-          <input type="tel" class="w-full px-4 py-3 bg-white border border-border rounded-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all text-text-dark" placeholder="010-0000-0000">
+          <label for="reservation-phone" class="text-sm font-semibold text-text-dark">연락처 <span aria-label="필수 항목">*</span></label>
+          <input id="reservation-phone" type="tel" required class="w-full px-4 py-3 bg-white border border-border rounded-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all text-text-dark" placeholder="010-0000-0000" autocomplete="tel">
         </div>
       </div>
 
       <div class="flex flex-col gap-2">
-        <label class="text-sm font-semibold text-text-dark">이메일</label>
-        <input type="email" class="w-full px-4 py-3 bg-white border border-border rounded-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all text-text-dark" placeholder="example@email.com">
+        <label for="reservation-email" class="text-sm font-semibold text-text-dark">이메일</label>
+        <input id="reservation-email" type="email" class="w-full px-4 py-3 bg-white border border-border rounded-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all text-text-dark" placeholder="example@email.com" autocomplete="email">
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="flex flex-col gap-2">
-          <label class="text-sm font-semibold text-text-dark">희망 상담일시</label>
-          <input type="date" class="w-full px-4 py-3 bg-white border border-border rounded-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all text-text-dark">
+          <label for="reservation-date" class="text-sm font-semibold text-text-dark">희망 상담일시</label>
+          <input id="reservation-date" type="date" class="w-full px-4 py-3 bg-white border border-border rounded-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all text-text-dark">
         </div>
         <div class="flex flex-col gap-2">
-          <label class="text-sm font-semibold text-text-dark">관심 과정 *</label>
-          <select class="w-full px-4 py-3 bg-white border border-border rounded-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all text-text-dark">
-            <option>선택하세요</option>
-            <option>몽골 의대 과정</option>
-            <option>헝가리 의대 과정</option>
-            <option>미국 의대 과정</option>
-            <option>기타</option>
+          <label for="reservation-course" class="text-sm font-semibold text-text-dark">관심 과정 <span aria-label="필수 항목">*</span></label>
+          <select id="reservation-course" required class="w-full px-4 py-3 bg-white border border-border rounded-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all text-text-dark">
+            <option value="">선택하세요</option>
+            <option value="mongolia">몽골 의대 과정</option>
+            <option value="hungary">헝가리 의대 과정</option>
+            <option value="usa">미국 의대 과정</option>
+            <option value="other">기타</option>
           </select>
         </div>
       </div>
 
       <div class="flex flex-col gap-2">
-        <label class="text-sm font-semibold text-text-dark">문의 내용</label>
-        <textarea rows="4" class="w-full px-4 py-3 bg-white border border-border rounded-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all text-text-dark leading-relaxed" placeholder="궁금하신 내용을 자세히 적어주세요"></textarea>
+        <label for="reservation-message" class="text-sm font-semibold text-text-dark">문의 내용</label>
+        <textarea id="reservation-message" rows="4" class="w-full px-4 py-3 bg-white border border-border rounded-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all text-text-dark leading-relaxed" placeholder="궁금하신 내용을 자세히 적어주세요"></textarea>
       </div>
 
       <div class="flex items-start gap-3 mt-4 p-4 bg-bg-light rounded-md">
-        <input type="checkbox" id="privacy" class="mt-1 w-4 h-4 text-primary focus:ring-primary border-gray-300 rounded">
+        <input type="checkbox" id="privacy" required class="mt-1 w-4 h-4 text-primary focus:ring-primary border-gray-300 rounded">
         <label for="privacy" class="text-sm text-text-body">
           <strong>[필수]</strong> 개인정보 수집·이용에 동의합니다. (수집 항목: 이름, 연락처 등)
         </label>
@@ -54,9 +57,9 @@
       <button type="submit" class="w-full bg-primary text-white font-bold text-lg py-4 rounded-md mt-6 hover:bg-primary-light hover:shadow-lg transition-all hover:-translate-y-0.5">
         상담 신청하기
       </button>
-      
+
       <p class="text-center text-xs text-text-muted mt-4">
-        🔒 해당 양식은 Google reCAPTCHA로 보호됩니다.
+        해당 양식은 Google reCAPTCHA로 보호됩니다.
       </p>
     </form>
   </div>
